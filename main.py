@@ -43,3 +43,6 @@ df.plot()
 
 # 그래프 표시
 plt.show()
+
+#가상환경 세팅
+#venv\Scripts\activate.bat
