@@ -24,7 +24,7 @@ fullName = 'John Jr Dow'
 
 resultOfSplit = fullName.split(' ')
 
-print(resultOfSplit)
+#print(resultOfSplit)
 
 # Using split to split a string, generating a "list", delimiter is an underscore '_'
 
@@ -32,7 +32,7 @@ fullName = 'John_Jr_Dow'
 
 resultOfSplit = fullName.split('_')
 
-print(resultOfSplit)
+#print(resultOfSplit)
 
 # Using split to split a string, and using the "list"
 
@@ -43,8 +43,8 @@ resultOfSplit = fullName.split(' ')
 firstName = fullName.split(' ')[0]
 lastName = fullName.split(' ')[-1]
 
-print("First Name:", firstName)
-print("Last Name:", lastName)
+#print("First Name:", firstName)
+#print("Last Name:", lastName)
 
 # Example of using "split", with the for-loop
 
@@ -55,27 +55,27 @@ nameList = fullName.split(' ')
 
 # Method 1: Using the number of elements directly
 
-print(nameList)
+#print(nameList)
 
-for i in range(0, 3):
-  print('Name ',i+1,' :',  nameList[i])
+# for i in range(0, 3):
+#   #print('Name ',i+1,' :',  nameList[i])
 
-# Method 2: Using the length function, replacing the static value of "3"
+# # Method 2: Using the length function, replacing the static value of "3"
 
-print(len(nameList))
+# #print(len(nameList))
 
-for i in range(0, len(nameList)):
-  print('Name ',i+1,' :',  nameList[i])
+# for i in range(0, len(nameList)):
+#   #print('Name ',i+1,' :',  nameList[i])
 
-# Method 3: Using the "enumerate" keyword
-## Most convenient
+# # Method 3: Using the "enumerate" keyword
+# ## Most convenient
 
-for name in nameList:
-  print('Name:',  name)
+# for name in nameList:
+#   #print('Name:',  name)
 
 
-for i, name in enumerate(nameList):
-  print('Name ',i+1,' :',  name)
+# for i, name in enumerate(nameList):
+#   #print('Name ',i+1,' :',  name)
 
 """## Part 2. Regular Expression
 
@@ -119,11 +119,11 @@ re.findall(regStr, string, re.DOTALL)
 
 textToFind = 'asdfasfasdfasdff <table> This is table Contents </table> asdfas;d'
 
-print("Initial Data:\n\t", textToFind)
+#print("Initial Data:\n\t", textToFind)
 tmpString1 = textToFind.split('<table>')[1]
-print("First Stage Result:\n\t", tmpString1)
+#print("First Stage Result:\n\t", tmpString1)
 tmpString2 = tmpString1.split('</table>')[0]
-print("Second Stage Result:\n\t", tmpString2)
+#print("Second Stage Result:\n\t", tmpString2)
 
 # Method 2: Using regular expression
 # All you have to write is the "pattern"
@@ -132,7 +132,7 @@ textToFind = 'asdfasfasdfasdff <table> This is table Contents </table>;d'
 
 pattern = '.*?<table>(.*?)</table>'
 result = re.findall(pattern, textToFind, re.DOTALL)
-print("RE Result:", result[0])
+#print("RE Result:", result[0])
 
 # Benefits of using regular expression vs split
 # And you can reuse the "pattern"
@@ -140,11 +140,11 @@ print("RE Result:", result[0])
 textToFind = 'asdfasfasdfasdff <table> This is table Contents 1</table> asdfas;dasdfasfasdfasdff <table> This is table Contents2 </table> asdfas;dsdfasfasdfasdff <table> This is table Contents3 </table> asdfas;dsdfasfasdfasdff <table> This is table Contents4 </table> asdfas;d'
 
 
-print("Initial Data:", textToFind)
+#print("Initial Data:", textToFind)
 
 pattern = '.*?<table>(.*?)</table>.*?'
 result = re.findall( pattern, textToFind, re.DOTALL)
-print("RE Result:", result)
+#print("RE Result:", result)
 
 """### 2-2 Regex Other Examples
 
@@ -160,7 +160,7 @@ textToFind = "asdfasdfasdfasdf asdfasdfasdf Jan-09-2020 asdf Feb-12-1990 asdfasd
 pattern = "(\D\D\D-\d\d-\d\d\d\d)"
 
 result = re.findall(pattern, textToFind, re.DOTALL)
-print(result)
+#print(result)
 
 """#### Parsing Emails (Sort of)
 
@@ -175,7 +175,8 @@ pattern = "\D[\w_]*@\D[\w]*\.\D\D\D"
 
 
 result = re.findall(pattern, textToFind, re.DOTALL)
-print(result)
+
+#print(result)
 
 """### 2-3. Regex with Online Tools
 
@@ -198,7 +199,7 @@ pattern = '<table>(.*)'
 
 result = re.findall(   pattern, textToFind, re.DOTALL)
 
-print(result)
+#print(result)
 
 textToFind = 'asdfasfasdfasdff <table> T1 </table> <table> T2 </table>'
 
@@ -207,7 +208,7 @@ pattern = '<table>(.*)</table>'
 
 result = re.findall(   pattern, textToFind, re.DOTALL)
 
-print(result)
+#print(result)
 
 textToFind = 'asdfasfasdfasdff <table> T1 </table> <table> T2 </table>'
 
@@ -216,7 +217,7 @@ pattern = '<table>(.*?)</table>'
 
 result = re.findall(   pattern, textToFind, re.DOTALL)
 
-print(result)
+#print(result)
 
 """HTML :
 
@@ -271,3 +272,9 @@ regStr = "<tr>[^<]*<td[^<]*>[^<]*<p[^<]*>([^<]*)</p></td>[^<]*<td[^<]*>[^<]*<p[^
 result = re.findall(regStr, data, re.DOTALL)
 for res in result:
   print('\t'.join(res))
+
+
+
+  #############################################
+
+  import 
